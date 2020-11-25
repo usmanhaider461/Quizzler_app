@@ -49,7 +49,7 @@ class _QuizPageState extends State<QuizPage> {
     print(loveScore);
   }
   // Question q1 = Question(q: 'You can lead a cow down stairs but not up stairs.', a: false);
-  List<bool> answer = [false, true, true];
+  // List<bool> answer = [false, true, true];
   int questionNumber = 0;
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                question[questionNumber],
+                 questionBank[questionNumber].questionText,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -89,7 +89,7 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: (){
                 loveCalculator();
-                bool correctAnswer = answer[questionNumber];
+                bool correctAnswer = questionBank[questionNumber].questionAnswer;
                 if(correctAnswer == true){
                   print('User got it right.');
                 } else print('user got it wrong');
@@ -119,7 +119,7 @@ class _QuizPageState extends State<QuizPage> {
                   ),
                 ),
                 onPressed: (){
-                  bool correctAnswer = answer[questionNumber];
+                  bool correctAnswer = questionBank[questionNumber].questionAnswer;
                   if(correctAnswer == false){
                     print('User got it right.');
                   } else print('user got it wrong');
