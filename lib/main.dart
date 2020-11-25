@@ -85,7 +85,19 @@ class _QuizPageState extends State<QuizPage> {
                 onPressed: (){},
               )
           ),
-        )
+        ),
+        Row(
+          children: [
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
+            Icon(
+              Icons.close,
+              color: Colors.red,
+            )
+          ],
+        ),
       ],
     );
   }
