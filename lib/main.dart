@@ -52,6 +52,23 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.all(15.0),
+            child: FlatButton(
+              textColor: Colors.white,
+              color: Colors.green,
+              child: Text(
+                'True',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                ),
+              ),
+              onPressed: (){},
+            )
+          ),
+        )
       ],
     );
   }
